@@ -1,0 +1,28 @@
+/* ANIMATIONS */
+
+@keyframes fade{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+
+@keyframes bg-change{
+  from{
+      opacity: 0;
+  }
+  to{
+      opacity: 1;
+  }
+
+}
+
+@keyframes slide-in{
+    from{
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}

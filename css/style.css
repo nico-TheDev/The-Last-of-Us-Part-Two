@@ -1,0 +1,242 @@
+
+/* GENERAL RESET */
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{list-style: none;}
+
+/* HEADER */
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right,rgba(0,0,0,0.5),rgba(255,255,255,0.2)),url(../img/bg.jpg);
+    background-size: cover;
+    background-position:center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.header::before{
+    content: url(/img/bg2.jpg);
+    display: block;
+    width: 100%;
+    height:100%;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+
+    animation: bg-change 10s ease-in-out alternate infinite;
+}
+
+/* NAVIGATION */
+
+.navbar{
+    height: 10vh;
+    font-size: 1.4rem;
+    padding: 0 1em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__items{
+    flex: 0 1 65%;
+
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.navbar__list{
+    display: inline-block;
+}
+
+.navbar__logo{
+    width: 100px;
+}
+
+.navbar__link:hover{
+    color: #fd0000;
+}
+
+.navbar__search{
+    cursor: pointer;
+}
+
+.searchbar{
+    width: 70px;
+    border:none;
+    background-color: transparent;
+    color:white;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+/* MAIN */
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+}
+
+
+/* MAIN CONTENT */
+
+
+.main__content{
+    flex-basis: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main__hero{
+    flex-basis: 30%;
+    margin-top: 4em;
+    animation: slide-in 1s ease-in forwards;
+}
+
+.main__textblock{
+    margin-bottom: 2em;
+    opacity: 0;
+
+    animation: slide-in 1s ease-in forwards 0.5s;
+}
+
+.main__logo{width: 60%;}
+
+.main__textblock .support-text{
+    width: 90%;
+    font-size: 1rem;
+    margin-bottom: 1.7em;
+}
+
+.social-links{
+    margin-bottom: 2em;
+    opacity: 0;
+    animation: slide-in 1s ease-in forwards 0.75s;
+}
+
+.link{transition: color 300ms ease;}
+
+.link:hover{color: #fd0000;}
+
+.social-list{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.main__producedby{
+    font-size: 1.2rem;
+    opacity: 0;
+
+    animation: slide-in 1s ease-in forwards 1s;
+}
+
+.company-logo{
+    display: block;
+    width: 150px;
+}
+
+
+/* MAIN SUB */
+
+.main__sub{
+    flex-basis: 30%;
+    padding: 3em 0;
+
+    opacity: 0;
+    animation: slide-in 1s ease-in forwards 1.25s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.award-title{font-size: 1.2rem;}
+
+.award-title__link{
+    font-weight: 600;
+    transition: all 300ms ease;
+}
+
+.award-title__link:hover{
+    text-decoration: underline;
+}
+
+.award-title__date{
+    display: block;
+}
+
+.trailer__container{
+    position: relative;
+    border: 2px solid gray;
+}
+
+.trailer__img{
+    width: 100%;
+    opacity: 1;
+
+    animation: fade 5s ease infinite alternate;
+}
+
+.trailer__container{
+    background-image: url(/img/trailer2.jpg);
+    background-size: cover;
+}
+
+.trailer__container::after{
+    content: "Play the Trailer";
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.2);
+    display: block;
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+    opacity: 0;
+    transition: all 300ms linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trailer__container:hover::after{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+/* ABOUT PAGE */
